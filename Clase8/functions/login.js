@@ -12,7 +12,7 @@ const ingresar = () =>{
         mensajeValidacion.innerHTML=`Bienvenido ${usuario}`;
 
         setTimeout(()=>{
-            window.location="./html/index.html";
+            window.location="./html/home.html";
         },3000);
 
     }else{
