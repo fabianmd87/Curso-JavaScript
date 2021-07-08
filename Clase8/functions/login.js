@@ -1,22 +1,27 @@
-var objetoUsuario = {usuario: "admin" , contrasenia: 123456};
+var usuarioBD="admin";
+var passBD= 123456;
+
 
 const ingresar = () =>{
 
     let usuario = document.getElementById("usuario").value;
-    let contrasenia = document.querySelector("#contrasenia").value;
+    let contrasenia = document.getElementById("contrasenia").value;
     let mensajeValidacion = document.querySelector('#mensaje-validacion');
 
-    if(usuario == objetoUsuario.usuario && contrasenia == objetoUsuario.contrasenia){
+    if(usuario == usuarioBD && contrasenia == passBD){
 
         mensajeValidacion.className="text-success";
         mensajeValidacion.innerHTML=`Bienvenido ${usuario}`;
 
         setTimeout(()=>{
-            window.location="./html/home.html";
+            window.location='./home.html';
         },3000);
 
     }else{
         mensajeValidacion.className="text-danger";
-        mensajeValidacion.innerHTML="Usuario o Contraseña incorrecta";
-    };
-}
+        mensajeValidacion.innerHTML="Usuario o contraseña incorrecta";
+        setTimeout(()=>{
+            window.location='./login.html';
+        },3000);
+    }
+};
