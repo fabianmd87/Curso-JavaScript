@@ -15,13 +15,13 @@ const ingresar = () =>{
 
         setTimeout(()=>{
             window.location='./home.html';
-        },3000);
+        },2000);
 
     }else{
         mensajeValidacion.className="text-danger";
         mensajeValidacion.innerHTML="Usuario o contraseña incorrecta";
         setTimeout(()=>{
             window.location='./login.html';
-        },3000);
+        },2000);
     }
 };
